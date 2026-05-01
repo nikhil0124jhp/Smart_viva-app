@@ -1,0 +1,97 @@
+<!-- FILE NAME: text.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Practice | Smart Viva AI</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Background Glow -->
+<div class="bg-blur blur1"></div>
+<div class="bg-blur blur2"></div>
+
+<!-- Navbar -->
+<header class="navbar">
+    <div class="logo">Smart Viva</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="voice.html">Voice Viva</a>
+        <a href="text.html">Text Practice</a>
+    </nav>
+</header>
+
+<!-- Text Practice Page -->
+<section class="text-page">
+
+    <div class="chat-card">
+
+        <span class="tagline">AI Text Viva Practice</span>
+
+        <h1>
+            Practice Viva With
+            <span>Smart Chat AI</span>
+        </h1>
+
+        <p>
+            Enter any subject or topic and practice viva questions in text mode.
+        </p>
+
+        <!-- Topic Input -->
+        <div class="topic-box">
+
+            <input 
+                type="text"
+                id="topicInput"
+                placeholder="Enter topic e.g. DBMS, Java, Python">
+
+            <button id="startChatBtn" class="primary-btn">
+                Start Practice
+            </button>
+
+        </div>
+
+        <!-- Chat Box -->
+        <div id="chatBox" class="chat-box">
+
+            <div class="bot-message">
+                Hello! Enter your topic and start viva practice.
+            </div>
+
+        </div>
+
+        <!-- Input -->
+        <div class="chat-input-area">
+
+            <input 
+                type="text"
+                id="userMessage"
+                placeholder="Type your answer...">
+
+            <button id="sendBtn" class="secondary-btn">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>© 2026 Smart Viva AI • Built for Students</p>
+</footer>
+
+<!-- JS -->
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

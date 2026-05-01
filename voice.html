@@ -1,0 +1,108 @@
+<!-- FILE NAME: voice.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voice Viva | Smart Viva AI</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- Background Glow -->
+<div class="bg-blur blur1"></div>
+<div class="bg-blur blur2"></div>
+
+<!-- Navbar -->
+<header class="navbar">
+    <div class="logo">Smart Viva</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="voice.html">Voice Viva</a>
+        <a href="text.html">Text Practice</a>
+    </nav>
+</header>
+
+<!-- Voice Viva Page -->
+<section class="voice-page">
+
+    <div class="voice-card">
+
+        <span class="tagline">Live AI Voice Viva</span>
+
+        <h1>
+            Start Your
+            <span>Voice Viva Session</span>
+        </h1>
+
+        <p>
+            Select subject and difficulty, then begin your live AI viva session.
+        </p>
+
+        <!-- Subject -->
+        <div class="input-group">
+            <label for="subject">Select Subject</label>
+
+            <select id="subject">
+                <option value="DBMS">DBMS</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+                <option value="Operating System">Operating System</option>
+                <option value="Computer Network">Computer Network</option>
+                <option value="Project Viva">Project Viva</option>
+            </select>
+        </div>
+
+        <!-- Difficulty -->
+        <div class="input-group">
+            <label for="difficulty">Select Difficulty</label>
+
+            <select id="difficulty">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+        </div>
+
+        <!-- Mic -->
+        <div class="mic-circle" id="mic-container">
+            🎤
+        </div>
+
+        <!-- Status -->
+        <p class="status-line" id="status-text">
+            Ready to start your viva session.
+        </p>
+
+        <!-- Buttons -->
+        <div class="voice-buttons">
+
+            <button id="vapi-btn" class="primary-btn">
+                Start Viva
+            </button>
+
+            <button id="stop-btn" class="secondary-btn">
+                End Viva
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>© 2026 Smart Viva AI • Built for Students</p>
+</footer>
+
+<!-- JS -->
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

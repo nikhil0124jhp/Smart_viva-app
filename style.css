@@ -1,0 +1,377 @@
+/* FILE NAME: style.css */
+
+/* =========================
+   RESET
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+    color:#ffffff;
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* =========================
+   BACKGROUND GLOW
+========================= */
+.bg-blur{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.35;
+    z-index:0;
+}
+
+.blur1{
+    width:260px;
+    height:260px;
+    background:#2563eb;
+    top:30px;
+    left:-80px;
+}
+
+.blur2{
+    width:280px;
+    height:280px;
+    background:#7c3aed;
+    right:-80px;
+    top:220px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar{
+    position:relative;
+    z-index:5;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 8%;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:800;
+    background:linear-gradient(to right,#38bdf8,#8b5cf6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.navbar nav{
+    display:flex;
+    gap:28px;
+}
+
+.navbar nav a{
+    color:#e5e7eb;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.navbar nav a:hover{
+    color:#38bdf8;
+}
+
+/* =========================
+   COMMON PAGE LAYOUT
+========================= */
+.home-page,
+.voice-page,
+.text-page{
+    position:relative;
+    z-index:2;
+    min-height:calc(100vh - 140px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 8% 70px;
+}
+
+/* =========================
+   COMMON CARD
+========================= */
+.home-card,
+.voice-card,
+.chat-card{
+    width:100%;
+    max-width:760px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:28px;
+    padding:42px;
+    text-align:center;
+    backdrop-filter:blur(14px);
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+.tagline{
+    display:inline-block;
+    padding:10px 16px;
+    border-radius:999px;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.08);
+    color:#cbd5e1;
+    font-size:14px;
+    margin-bottom:22px;
+}
+
+h1{
+    font-size:52px;
+    line-height:1.15;
+    margin-bottom:16px;
+}
+
+h1 span{
+    background:linear-gradient(to right,#38bdf8,#8b5cf6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+p{
+    color:#cbd5e1;
+    font-size:17px;
+    line-height:1.7;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.home-buttons,
+.voice-buttons,
+.topic-box,
+.chat-input-area{
+    display:flex;
+    gap:14px;
+    margin-top:28px;
+}
+
+.primary-btn,
+.secondary-btn,
+select,
+input{
+    border:none;
+    outline:none;
+    border-radius:14px;
+    font-size:15px;
+}
+
+.primary-btn,
+.secondary-btn{
+    cursor:pointer;
+    font-weight:700;
+    padding:14px 24px;
+    transition:.3s;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.primary-btn{
+    background:linear-gradient(90deg,#2563eb,#7c3aed);
+    color:#fff;
+}
+
+.secondary-btn{
+    background:rgba(255,255,255,.07);
+    color:#fff;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover{
+    transform:translateY(-3px);
+}
+
+/* =========================
+   FORM
+========================= */
+.input-group{
+    text-align:left;
+    margin-top:18px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-size:14px;
+    color:#cbd5e1;
+}
+
+/* FIXED SELECT + INPUT */
+select,
+input{
+    width:100%;
+    padding:14px 16px;
+    background:#1e293b;
+    color:#ffffff;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+/* FIXED DROPDOWN OPTIONS */
+select option{
+    background:#111827;
+    color:#ffffff;
+}
+
+/* FOCUS EFFECT */
+select:focus,
+input:focus{
+    border-color:#3b82f6;
+    box-shadow:0 0 0 3px rgba(59,130,246,.25);
+}
+
+input::placeholder{
+    color:#94a3b8;
+}
+
+/* =========================
+   VOICE PAGE
+========================= */
+.mic-circle{
+    width:90px;
+    height:90px;
+    margin:28px auto 20px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    box-shadow:0 0 25px rgba(99,102,241,.45);
+}
+
+.status-line{
+    margin-top:10px;
+}
+
+/* =========================
+   CHAT PAGE
+========================= */
+.chat-box{
+    margin-top:24px;
+    height:420px;
+    overflow-y:auto;
+    padding:20px;
+    border-radius:18px;
+    background:rgba(255,255,255,.05);
+    text-align:left;
+}
+
+.chat-box::-webkit-scrollbar{
+    width:6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb{
+    background:#475569;
+    border-radius:10px;
+}
+
+.bot-message,
+.user-message{
+    max-width:75%;
+    padding:14px 16px;
+    border-radius:16px;
+    margin-bottom:14px;
+    line-height:1.6;
+}
+
+.bot-message{
+    background:rgba(59,130,246,.20);
+    border:1px solid rgba(59,130,246,.25);
+}
+
+.user-message{
+    background:rgba(124,58,237,.20);
+    border:1px solid rgba(124,58,237,.25);
+    margin-left:auto;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer{
+    padding:24px 8%;
+    text-align:center;
+    color:#94a3b8;
+    border-top:1px solid rgba(255,255,255,.08);
+    position:relative;
+    z-index:2;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:900px){
+
+h1{
+    font-size:42px;
+}
+
+.home-buttons,
+.voice-buttons,
+.topic-box,
+.chat-input-area{
+    flex-direction:column;
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    gap:18px;
+}
+
+.navbar nav{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.home-card,
+.voice-card,
+.chat-card{
+    padding:28px;
+}
+
+.chat-box{
+    height:340px;
+}
+
+}
+
+@media(max-width:480px){
+
+h1{
+    font-size:32px;
+}
+
+p{
+    font-size:15px;
+}
+
+.home-page,
+.voice-page,
+.text-page{
+    padding:20px 5% 55px;
+}
+
+.footer{
+    padding:18px 5%;
+}
+
+}
